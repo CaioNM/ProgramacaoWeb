@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Aula de Programação Web - Dia 05/08</title>
+<title>Aula dia 12/08</title>
 </head>
 <body>
-<p>
-	<h1>Olá, Mundo! Esta é a primeira atividade da disciplina de Programação Web! :)</h1>
-</p>
+	<h1>Hello, World</h1>
 </body>
 </html>
