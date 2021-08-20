@@ -39,8 +39,7 @@ public class ServletAgenda extends HttpServlet {
 				+ "<BR></BR>"
 				+ "Data de Nascimento: XX/XX/XX"
 				+ "</H3>"
-				+ "</BODY>"
-				+ "</HTML>");
+				+ "</BODY></HTML>");
 		saida.close();
 	}
 

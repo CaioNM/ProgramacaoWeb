@@ -29,7 +29,9 @@ public class ServletMeuNome extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter saida = response.getWriter();
-		saida.write("<HTML><BODY><H3>Meu nome é: Caio Nunes de Moura</H1></BODY></HTML>");
+		saida.write("<HTML><BODY>"
+				+ "<H3>Meu nome é: Caio Nunes de Moura</H1>"
+				+ "</BODY></HTML>");
 		saida.close();
 	}
 

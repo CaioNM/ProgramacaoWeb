@@ -42,8 +42,7 @@ public class ServletPaginaAgenda extends HttpServlet {
 				+ "<BR><BR>"
 				+ "<A HREF='http://localhost:8080/Aulas/ServletAgenda'>Enviar</A>"
 				+ "</FORM>"
-				+ "</BODY>"
-				+ "</HTML>");
+				+ "</BODY></HTML>");
 		saida.close();
 	}
 

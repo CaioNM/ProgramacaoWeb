@@ -27,7 +27,9 @@ public class ServletExemplo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter saida = response.getWriter();
-		saida.write("<HTML><BODY><H1>Olá, Mundo! :)</H1></BODY></HTML>");
+		saida.write("<HTML><BODY>"
+				+ "<H1>Olá, Mundo! :)</H1>"
+				+ "</BODY></HTML>");
 		saida.close();
 	}
 

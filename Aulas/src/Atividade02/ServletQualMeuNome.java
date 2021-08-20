@@ -29,7 +29,9 @@ public class ServletQualMeuNome extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter saida = response.getWriter();
-		saida.write("<HTML><BODY><A HREF='http://localhost:8080/Aulas/ServletMeuNome'>Qual é o meu nome?</A></BODY></HTML>");
+		saida.write("<HTML><BODY>"
+				+ "<A HREF='http://localhost:8080/Aulas/ServletMeuNome'>Qual é o meu nome?</A>"
+				+ "</BODY></HTML>");
 		saida.close();
 	}
 
