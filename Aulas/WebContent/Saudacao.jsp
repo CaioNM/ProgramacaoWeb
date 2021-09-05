@@ -9,8 +9,8 @@
 <body>
 Por favor, informe seu Nome, Sobrenome e Clique em "Enviar": 
 <form action="Saudacao" method="post">
-	<input type="text" name="nome" placeholder="Nome" />
-	<input type="text" name="sobrenome" placeholder="Sobrenome" />
+	<input type="text" name="primeiroNome" placeholder="Nome" />
+	<input type="text" name="ultimoNome" placeholder="Sobrenome" />
 	<input type="submit" value="Enviar">
 </form>
 </body>

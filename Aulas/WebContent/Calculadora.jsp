@@ -5,6 +5,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Calculadora</title>
+<style>
+body { 
+	background-color: #00cc66
+}
+</style>
 </head>
 <body>
 <center>

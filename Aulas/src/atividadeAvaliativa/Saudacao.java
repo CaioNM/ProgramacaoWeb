@@ -28,7 +28,7 @@ public class Saudacao extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	PrintWriter saida = response.getWriter();
     	saida.write("<HTML><BODY>");
-    	saida.write("Olá, " + request.getParameter("nome") + "  " + request.getParameter("sobrenome") + " tudo bem? Seja bem vindo a esta página web! :D");
+    	saida.write("Olá " + request.getParameter("primeiroNome") + "  " + request.getParameter("ultimoNome") + ", tudo bem? Seja bem vindo a esta página web! :D");
     	saida.write("</BODY></HTML>");
     	saida.close();
     }
