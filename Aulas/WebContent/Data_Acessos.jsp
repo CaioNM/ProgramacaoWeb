@@ -7,11 +7,10 @@
 <title>Acessos</title>
 </head>
 <body>
-<% Aula08.Contador.novoAcesso(); %>
+<% atividade_TrabalhandoComJSPs.Contador.novoAcesso(); %>
 Quantidade de acessos as esta pagina: 
-<b> <%= Aula08.Contador.getQuantidadeAcessos() %> </b>
-<br>
-<b> Primeiro acesso: <%= Aula08.Contador.getPrimeiraData() %></b>
-<b> Ultimo acesso: <%= Aula08.Contador.getData() %></b>
+<b> <%= atividade_TrabalhandoComJSPs.Contador.getQuantidadeAcessos() %> </b>
+horario
+<b> <% atividade_TrabalhandoComJSPs.Contador.primeiroAcesso(); %></b>
 </body>
 </html>

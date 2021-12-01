@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Atividade</title>
+<script type="text/javascript">
+function adicionarTexto(){
+	var campoAreaTexto = document.getElementById("areaTexto");
+	var campoItens = document.getElementById("itens");
+	var posicaoSelecionada = campoItens.selectedIndex;
+	var novoTexto = campoItens[posicaoSelecionada].text;
+	campoAreaTexto.value = campoAreaTexto.value +"\n" + novoTexto;
+}
+
+function inserirRegistro(){
+var nome = document.getElementById("inputNome").value;
+var cpf = document.getElementById("inputCPF").value;
+var tabela = document.getElementById("registros");
+var linhasTotais = tabela.rows.length;
+var novaLinha = tabela.insertRow(linhasTotais);
+var novaCelulaNome = novaLinha.insertCell(0);
+var novaCelulaCPF = novaLinha.insertCell(1);
+novaCelulaNome.innerHTML = nome;
+novaCelulaCPF.innerHTML = cpf;
+} 
+function mCPF(cpf){
+cpf=cpf.replace(/\D/g,"")
+cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+return cpf
+	}
+</script>
+</head>
+<body>
+<h2>Atividade Programação WEB</h2>
+	Nome: <input id="inputNome" type="text"/><br/>
+	CPF: <input id="inputCPF" type="text"/><br/>
+	<input type="button" value="Inserir Registro" onclick="inserirRegistro()"><br/><br/>
+<table id="registros" border="1">
+	<tr>
+		<th>Nome</th>
+		<th>CPF</th>
+	</tr>
+	<tr>
+		<td>Luana</td>
+		<td>123.456.789-10</td>
+	</tr>
+
+</table>
+</body>
+</html>
