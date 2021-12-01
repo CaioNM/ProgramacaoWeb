@@ -38,6 +38,42 @@ return cpf
 	CPF: <input id="inputCPF" type="text"/><br/>
 	<input type="button" value="Inserir Registro" onclick="inserirRegistro()"><br/><br/>
 <table id="registros" border="1">
+<script type="text/javascript">
+function inserirRegistro(){
+	var nome = document.getElementById("inputNome").value;
+	var cpf = document.getElementById("inputCPF").value;
+	var tabela = document.getElementById("registros");
+	
+	var linhasTotais = tabela.rows.length;
+	
+	var novaLinha = tabela.insertRow(linhasTotais);
+
+	var novaCelulaNome = novaLinha.insertCell(0);
+	var novaCelulaCPF = novaLinha.insertCell(1);
+	
+	novaCelulaNome.innerHTML = nome;
+	novaCelulaCPF.innerHTML = cpf;
+}
+
+function mascaraCPF(){
+	var mask = document.getElementById("inputCPF")
+	if(mask.value.length == 3 || mask.value.length == 7){
+		mask.value += "."
+	} else if(mask.value.length == 11){
+		mask.value += "-"
+	}
+}
+</script>
+<head>
+<meta charset="ISO-8859-1">
+<title>Programação WEB</title>
+</head>
+<body>
+<h2>Atividade do dia 19/11 - Manipulação</h2>
+<input id="inputNome" type="text" placeholder="Insira o Nome"/><br/>
+<input id="inputCPF"  type="text" placeholder="Insira o CPF" onkeyup="mascaraCPF()" maxlength="14"><br/><br/>
+	<input type="button" value="Inserir Registro" onclick="inserirRegistro()"><br/><br/>
+<table id="registros" border="3">
 	<tr>
 		<th>Nome</th>
 		<th>CPF</th>
@@ -47,6 +83,9 @@ return cpf
 		<td>123.456.789-10</td>
 	</tr>
 
+		<td>Caio Moura</td>
+		<td>123.456.789-10</td>
+	</tr>
 </table>
 </body>
 </html>

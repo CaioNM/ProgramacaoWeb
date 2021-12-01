@@ -8,10 +8,11 @@ public class Contador{
 	private static int contagem; 
 	static ArrayList<String> datas = new ArrayList<>();
 	
+
 	public static void novoAcesso() {
 		contagem += 1;
 	}
-	
+
 	public static int getQuantidadeAcessos(){
 		return contagem;
 	}
