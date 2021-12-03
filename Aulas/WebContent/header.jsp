@@ -9,9 +9,10 @@
 <title>Data</title>
 </head>
 <body>
-Bem-vindo, Professor!
+<%-- Header que vai em todas as páginas, mostrando uma pequena saudação e a data/hora atual. --%>
+Bem-vindo, professor!
 <% SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");%>
 <% sdf.format(new Date()); %>
-<%= (new Date()).toLocaleString() %>
+Hoje são: <%= (new Date()).toLocaleString() %> :)
 </body>
 </html>

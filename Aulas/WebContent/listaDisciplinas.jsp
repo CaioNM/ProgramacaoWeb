@@ -9,19 +9,25 @@
 <title>Lista de notas e disciplinas</title>
 </head>
 <body>
-<h3>Lista de Notas:</h3>
+<center>
+<%-- Chamada do documento header: --%>
+<%@ include file="header.jsp" %><br>
+<h3>Situação dos Alunos:</h3>
 
-<table border="1">
+<%-- Criação das tabelas começando pelos titulos: --%>
+<table border="4">
 	<tr>
 		<td>Disciplina</td>
 		<td>Nome</td>
 		<td>Nota</td>
 		<td>Situação</td>
 	</tr>
+	<%-- Chamada da lista para pegar dos dados inseridos na tela de cadastro: --%>
 	<%
 		List<Nota> lista = (List<Nota>) request.getAttribute("lista");
 		for(Nota nota : lista){
 	%>
+	<%-- Chamando dados específicos pelos seus nomes --%>
 	<tr>
 		<td><%= nota.getDisciplina() %></td>
 		<td><%= nota.getNomeAluno() %></td>
@@ -31,9 +37,14 @@
 	<%
 		}
 	%>
-	<br><br>
-	<a href="ServletControladora">Voltar ao menu principal</a>
-</table>
-
+	</table>
+	<%-- Botão que leva a um novo cadastro: --%>
+<a href="http://localhost:8080/Aulas/ServletControladora?acao=cadastrar">Adicionar nova nota</a><br><br>
+</form>
+<form action="ServletControladora">
+<%-- Fim do form e botão que redireciona ao menu: --%>
+<input type="submit" value="Voltar ao menu principal" >
+</form>
 </body>
+</center>
 </html>
