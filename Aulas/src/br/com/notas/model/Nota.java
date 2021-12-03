@@ -1,11 +1,13 @@
 package br.com.notas.model;
 
+// Definindo dados que aparecerão nas tabelas mais a frente sendo, nome, disciplina, nota e a situação:
 public class Nota {
 	private String nomeAluno;
 	private String disciplina;
 	private float resultado;
 	private String situacao;
-	
+
+// Metodos get e set dos dados:
 	public String getNomeAluno() {
 		return nomeAluno;
 	} 

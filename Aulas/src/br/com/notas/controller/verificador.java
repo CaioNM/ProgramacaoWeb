@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class verificador
- */
 @WebServlet("/verificador")
 public class verificador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,15 +26,18 @@ public class verificador extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Chamada dos dados inseridos pelo usuario, seu login e senha
 		 String username = request.getParameter("usuario");
 		 String password = request.getParameter("senha");
+		 //Declaração dos atributos corretos e preenchimento da sessao:
 		if (username.equals("professor") && username!=null && password!=null && password.equals("Progweb2021")) {
 			HttpSession sessao = request.getSession();
 			sessao.setAttribute(USUARIO, username);
-			// Verificar se o atributo da sessão está preenchido
+			// Verifica se o atributo da sessão está preenchido
 			HttpSession session = request.getSession(true);
 			request.getRequestDispatcher("ServletControladora").forward(request, response);
 		}else{
+		// Mensagem caso o usuário erre seus dados
 		showMessageDialog(null, "Usuário/Senha incorretos, tente novamente...");
 	}
 	}
